@@ -1,0 +1,294 @@
+:root{
+    --font-title:'Cantarell', sans-serif;
+    --font-subtitle:'Jost', sans-serif;
+    --background: linear-gradient(135deg, #e6812f7a 0%, #db6516ab 100%);
+    --background: linear-gradient(175deg, #f26d007c 0%, #00000078 100%);
+
+    --color-white:#ffffff;
+
+    --background-article: #e8d4c4;
+    /* --background-footer: #F9B883; */
+    --background-footer: linear-gradient(175deg, #f29951e7 0%, #e8d4c4d1 100%);
+    --background-footer: linear-gradient(175deg, #e8d4c4d1 0%, #f29951e7 100%);
+
+    --color-footer:#703200;
+    
+    --margin-hero-text-wide: 0 15px 15px 350px;
+    --margin-hero-text-tablet: 0 15px 15px 100px;
+    --margin-hero-text-mobile: 0 15px 15px -5px;
+}
+
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 16px;
+    scroll-behavior:smooth;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+    max-width: 1200px;
+}
+
+.container__article{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 0;
+    max-width: 1200px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.hero{
+    /* background-image: url('../img/heidelberg.jpg'); */
+    background-image: var(--background),url('../img/heidelberg.jpg');
+    display:grid;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative; 
+}
+
+.hero .container{
+    padding: 0;
+}
+
+.hero__container{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+    align-items: left;
+    color:#fff;
+    flex-direction:column;
+    align-content: stretch;
+}
+
+.hero__texts{
+    width: 80%;
+    margin-bottom: 200px;
+    margin-bottom: 50px;
+}
+
+.hero__title{
+    font-family: var(--font-title);
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 5rem;
+}
+.hero__subtitle{
+    font-family: var(--font-subtitle);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 36px;
+    margin: 55px auto;
+}
+
+.hero__link a{
+    text-decoration: none;
+    color:var(--color-secondary);
+    margin:0 0 0 35px;
+    font-size: 1.19rem;
+}
+
+.error{
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height:80vh;
+}
+
+.error__title{
+    font-family: var(--font-title);
+	font-weight: 600;
+	font-size: 2.5rem;
+	line-height: 36px;
+    margin:0px auto;
+    margin-bottom: 20px;
+}
+.error__paragraph{
+    margin:0px auto;
+    margin-top:20px;
+    margin-bottom:50px;
+}
+.error img{
+    width:35rem;
+    margin:0px auto;
+    /* margin:50px 0 20px 0; */
+}
+
+.text__title{
+	font-family: var(--font-subtitle);
+	font-weight: 500;
+	font-size: 1.5rem;
+	line-height: 36px;
+    margin:0px auto;
+}
+
+.text__paragraph, .error__paragraph{
+	font-family: var(--font-subtitle);
+    font-size: 1.3rem;
+	font-weight: 500;
+	line-height: 30px;
+    margin-bottom: 30px;
+}
+
+main{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--background-article);
+}
+
+section{
+    margin-top:40px;
+}
+
+footer{
+    font-family: var(--font-subtitle);
+    color:var(--color-footer);
+    /* background-image: var(--background-footer); */
+    background-image: var(--background-footer),url('../img/heidelberg.jpg');
+    background-image: var(--background-footer),url('../img/imgfooter-01.jpg');
+}
+
+.footer{
+    width: 90%;
+    height:auto;
+    margin: 0 auto;
+    overflow: hidden;
+    /* padding: 20px 0; */
+    max-width: 1200px;
+    
+    display:grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit,minmax(min(100%,20em),2fr));
+}
+
+.footer__title{
+    /* color:var(--color-white); */
+    font-size: 1.5rem;
+    font-weight:400;
+    margin:0 auto;
+}
+
+.footer__subtitle{
+    /* color:var(--color-white); */
+    font-size: 1.1rem;
+    font-weight:300;
+}
+
+.card{
+    background-color:rgba(255, 255, 255, 0);
+}
+
+.footer__card{
+    border-radius: 0px !important;
+    border: none;
+}
+
+.footer__links{
+    display:flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+  }
+
+.footer__redessociales{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer__redessociales a{
+    /* margin:0 8px 0 8px; */
+    text-decoration: none;
+}
+
+.footer__links a, .footer__brand a, .text__paragraph a{
+    text-decoration: none;
+    color:var(--color-secondary);
+}
+
+.footer__links a:hover{
+    color:var(--color-white);
+}
+
+.footer__logoinpm{
+    width:120px;
+}
+
+.icono_redsocial{
+    height:25px;
+    color:var(--color-footer);
+}
+
+@media (max-width:915px){
+    .hero{
+        height:100vh;
+    }
+    .hero__texts{
+        width: 80%;
+        margin-bottom: 0px;
+    }
+
+    .hero__title{
+        margin:var(--margin-hero-text-tablet);
+        font-size: 5rem;
+        line-height: 85px;
+    }
+    
+    .hero__subtitle{
+        margin:var(--margin-hero-text-tablet);
+        line-height: 45px;
+      }
+
+      .error img{
+        width:18rem;
+        margin:0px auto;
+        /* margin:50px 0 20px 0; */
+    }
+
+}
+
+@media (max-width:596px){
+    .hero__texts{
+        width: 80%;
+        margin-bottom: 5px;
+    }
+    .hero__title{
+        margin:var(--margin-hero-text-mobile);
+        font-size: 3rem;
+        line-height: 70px;
+    }
+    
+    .hero__subtitle{
+        margin:var(--margin-hero-text-mobile);
+        font-size: 1.5rem;
+        line-height: 30px;
+      }
+
+      .error__title{
+        font-family: var(--font-title);
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 36px;
+        margin:30px auto;
+    }
+
+      .error img{
+        width:18rem;
+        margin:0px auto;
+    }
+}
